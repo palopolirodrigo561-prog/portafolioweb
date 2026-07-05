@@ -1,0 +1,390 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#1f35ff;
+    color:#fff;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:30px;
+    font-weight:700;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-size:17px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#8ec5ff;
+}
+
+/* INICIO */
+
+.inicio{
+    position:relative;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+}
+
+.contenido{
+    z-index:2;
+}
+
+.inicio h1{
+    font-size:95px;
+    font-weight:800;
+    line-height:95px;
+}
+
+.inicio h2{
+    margin-top:20px;
+    font-size:30px;
+    font-weight:300;
+    letter-spacing:2px;
+}
+
+.boton{
+    margin-top:70px;
+    display:inline-block;
+    padding:18px 60px;
+    border:2px solid white;
+    color:white;
+    text-decoration:none;
+    transition:.4s;
+    font-size:18px;
+}
+
+.boton:hover{
+    background:white;
+    color:#1f35ff;
+}
+
+/* FORMAS */
+
+.ondas{
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:2px solid rgba(255,255,255,.25);
+    border-radius:45%;
+}
+
+.izquierda{
+    left:-180px;
+    top:120px;
+    transform:rotate(25deg);
+}
+
+.derecha{
+    right:-180px;
+    top:70px;
+    transform:rotate(-25deg);
+}
+
+/* SECCIONES */
+
+section{
+    padding:100px 10%;
+}
+
+section h2{
+    text-align:center;
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.sobre p{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:20px;
+    line-height:35px;
+}
+
+/* HABILIDADES */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:18px;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    background:rgba(255,255,255,.15);
+}
+
+.card i{
+    font-size:40px;
+    margin-bottom:14px;
+}
+
+.card h3{
+    font-size:20px;
+}
+
+/* PROYECTOS */
+.card{
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+}
+
+.descripcion{
+    opacity:0;
+    max-height:0;
+    overflow:hidden;
+    transition:.5s ease;
+}
+
+.card:hover .descripcion{
+    opacity:1;
+    max-height:60px;
+    margin-top:15px;
+}
+
+.btn-mas{
+    transition:.4s;
+}
+
+.btn-mas:hover{
+    transform:rotate(180deg) scale(1.15);
+}
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.proyecto{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.proyecto img{
+    width:100%;
+    display:block;
+}
+
+.proyecto h3{
+    color:#1f35ff;
+    padding:20px;
+    text-align:center;
+}
+/* ===== PRÁCTICAS ===== */
+
+.practicas{
+    padding:100px 8%;
+}
+
+.contenedor{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:30px;
+    flex-wrap:nowrap;
+}
+
+.card-practica{
+    width:240px;
+    position:relative;
+}
+
+.card-practica img{
+    width:130px;
+    height:150px;
+    object-fit:cover;
+    border-radius:15px;
+    display:block;
+    margin:auto;
+    position:relative;
+    z-index:2;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.info-practica{
+    margin-top:-40px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:65px 18px 20px;
+    min-height:220px;
+    color:white;
+    text-align:center;
+    transition:.4s;
+}
+
+.card-practica:hover{
+    transform:translateY(-10px);
+}
+
+.info-practica p{
+    font-size:14px;
+    line-height:22px;
+    opacity:0;
+    max-height:0;
+    overflow:hidden;
+    transition:.4s;
+}
+
+.card-practica:hover .info-practica p{
+    opacity:1;
+    max-height:120px;
+    margin-top:10px;
+}
+
+.info-practica h2{
+    font-size:20px;
+    margin-top:15px;
+}
+
+.btn-mas{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:white;
+    color:#1f35ff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:28px;
+    margin:20px auto 0;
+    transition:.3s;
+}
+
+.btn-mas:hover{
+    transform:rotate(180deg) scale(1.1);
+}
+/* CONTACTO */
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+textarea{
+    margin-bottom:20px;
+    padding:18px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+textarea{
+    resize:none;
+    height:180px;
+}
+
+button{
+    padding:18px;
+    background:white;
+    color:#1f35ff;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:700;
+    transition:.3s;
+}
+
+button:hover{
+    background:#dce7ff;
+}
+
+/* FOOTER */
+
+footer{
+    padding:40px;
+    text-align:center;
+}
+
+.redes{
+    margin-top:20px;
+}
+
+.redes a{
+    color:white;
+    font-size:30px;
+    margin:0 12px;
+    transition:.3s;
+}
+
+.redes a:hover{
+    color:#8ec5ff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:20px;
+}
+
+.inicio h1{
+    font-size:60px;
+    line-height:65px;
+}
+
+.inicio h2{
+    font-size:22px;
+}
+
+.ondas{
+    width:300px;
+    height:300px;
+}
+
+}
